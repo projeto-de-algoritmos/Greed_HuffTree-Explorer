@@ -1,0 +1,49 @@
+.Huffman {
+    text-align: center;
+    background-color: var(--color-playful-peach);
+    flex-grow: 1;
+}
+
+.Huffman h3 {
+    color: var(--color-electric-blue);
+    margin-bottom: 10px;
+}
+
+.Huffman p {
+    color: var(--color-purple-haze);
+    margin-bottom: 5px;
+}
+
+.Huffman input[type="file"] {
+    margin-right: 10px;
+    background-color: var(--color-bubblegum-pop);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Huffman button {
+    background-color: var(--color-bubblegum-pop);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Huffman button:hover {
+    background-color: var(--color-playful-peach);
+}
+
+.Huffman h2 {
+    color: var(--color-electric-blue);
+    margin-bottom: 10px;
+}
+
+.Huffman img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
