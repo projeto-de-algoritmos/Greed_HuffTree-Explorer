@@ -74,16 +74,28 @@ class Huffman extends React.Component {
     });
   };
   
-  
 
   render() {
+    const { originalImage, compressedImage, huffmanTree } = this.state;
+
     return (
       <div>
         <input type="file" onChange={this.handleImageUpload} />
         <button onClick={this.compressImage}>Compactar Imagem</button>
-        {/* Exiba a imagem original */}
-        {/* Exiba a imagem compactada */}
-        {/* Exiba a árvore de Huffman */}
+
+        {originalImage && (
+          <div>
+            <h2>Imagem Original</h2>
+            <img src={originalImage.src} alt="Imagem Original" />
+          </div>
+        )}
+
+        {compressedImage && (
+          <div>
+            <h2>Imagem Compactada</h2>
+            <img src={compressedImage.src} alt="Imagem Compactada" />
+          </div>
+        )}
       </div>
     );
   }
