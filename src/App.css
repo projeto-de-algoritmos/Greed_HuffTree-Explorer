@@ -1,38 +1,26 @@
+:root {
+  --color-pink-flamingo: #FF66CC;
+  --color-sunshine-yellow: #FFCC00;
+  --color-electric-blue: #00CCFF;
+  --color-luscious-lime: #99FF00;
+  --color-purple-haze: #9933FF;
+  --color-candy-apple-red: #FF3333;
+  --color-tropical-orange: #FF6600;
+  --color-bubblegum-pop: #FF99CC;
+  --color-aqua-splash: #00FFFF;
+  --color-playful-peach: #FF9966;
+  --white: #F2F2F2;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  min-height: 100vh;
 }

@@ -1,0 +1,14 @@
+.about-the-project {
+    background-color: var(--color-electric-blue);
+    padding: 20px;
+    color: white;
+    flex-grow: 1;
+}
+
+.about-the-project h2 {
+    color: var(--color-sunshine-yellow);
+}
+
+.about-the-project p {
+    color: var(--color-purple-haze);
+}

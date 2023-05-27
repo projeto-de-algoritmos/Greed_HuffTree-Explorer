@@ -1,0 +1,60 @@
+.about-us {
+    background-color: var(--color-bubblegum-pop);
+    padding: 20px;
+    color: white;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.intro-text {
+    margin-bottom: 20px;
+}
+
+.intro-text h2 {
+    color: var(--color-electric-blue);
+}
+
+.intro-text p {
+    color: var(--color-purple-haze);
+}
+
+.intro-participants {
+    display: flex;
+    gap: 20px;
+}
+
+.intro-participants .davi,
+.intro-participants .pedro {
+    background-color: var(--color-playful-peach);
+    padding: 20px;
+    color: white;
+    width: 50%;
+}
+
+.intro-participants .davi h4 a,
+.intro-participants .pedro h4 a {
+    color: var(--color-sunshine-yellow);
+    text-decoration: none;
+}
+
+.intro-participants .davi h6,
+.intro-participants .pedro h6 {
+    color: var(--color-tropical-orange);
+}
+
+.intro-participants .davi-photo,
+.intro-participants .pedro-photo {
+    text-align: center;
+}
+
+.intro-participants .davi-photo img,
+.intro-participants .pedro-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.intro-participants .davi-photo img:hover,
+.intro-participants .pedro-photo img:hover {
+    transform: scale(1.1);
+}
