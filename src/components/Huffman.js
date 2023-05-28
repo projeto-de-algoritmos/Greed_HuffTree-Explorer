@@ -1,155 +1,92 @@
-import React from 'react';
-import './styles/Huffman.css';
+import React, { useState } from 'react';
 
-class Huffman extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      originalImage: null,
-      compressedImage: null,
-      huffmanTree: null,
-    };
+const HuffmanNode = ({ node }) => {
+  if (!node) {
+    return null;
   }
 
-  downloadImage = () => {
-    const { compressedImage } = this.state;
+  const { char, frequency, left, right } = node;
 
-    const downloadLink = document.createElement('a');
-    downloadLink.href = `data:image/jpeg;base64,${compressedImage}`;
-    downloadLink.download = 'compressed_image.jpg';
-
-    downloadLink.click();
-  };
-
-  handleImageUpload = (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = () => {
-      const image = new Image();
-      image.src = reader.result;
-      image.onload = () => {
-        this.setState({ originalImage: image });
-      };
-    };
-    reader.readAsDataURL(file);
-  };
-
-  compressImage = () => {
-    const { originalImage } = this.state;
-
-
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = originalImage.width;
-    canvas.height = originalImage.height;
-    ctx.drawImage(originalImage, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const pixels = imageData.data;
-    const frequencies = {};
-
-    for (let i = 0; i < pixels.length; i += 4) {
-      const red = pixels[i];
-      const green = pixels[i + 1];
-      const blue = pixels[i + 2];
-      const pixelValue = `${red},${green},${blue}`;
-      if (frequencies[pixelValue]) {
-        frequencies[pixelValue]++;
-      } else {
-        frequencies[pixelValue] = 1;
-      }
-    }
-
-    const huffmanTree = buildHuffmanTree(frequencies);
-    let compressedPixels = '';
-    for (let i = 0; i < pixels.length; i += 4) {
-      const red = pixels[i];
-      const green = pixels[i + 1];
-      const blue = pixels[i + 2];
-      const pixelValue = `${red},${green},${blue}`;
-      const huffmanCode = encodePixel(huffmanTree, pixelValue);
-      compressedPixels += huffmanCode;
-    }
-
-    this.setState({
-      compressedImage: compressedPixels,
-      huffmanTree: huffmanTree,
-    });
-  };
-
-
-  render() {
-    const { originalImage, compressedImage } = this.state;
-
-    return (
-      <div className='Huffman'>
-        <h2>Como usar:</h2>
-        <p>1. Selecione um arquivo de imagem para upload.</p>
-        <p>2. Clique no botão "Compactar Imagem" para iniciar o processo de compressão.</p>
-        <p>3. A imagem original e a imagem compactada serão exibidas abaixo, se o processo for concluído com sucesso.</p>
-
-        <input type="file" className="huffman-input-file" onChange={this.handleImageUpload} />
-        <button onClick={this.compressImage}>Compactar Imagem</button>
-
-        {originalImage && (
-          <div>
-            <h2>Imagem Original</h2>
-            <img src={originalImage.src} alt="Imagem Original" />
-          </div>
-        )}
-
-        {compressedImage && (
-          <div>
-            <h2>Imagem Compactada</h2>
-            <button onClick={this.downloadImage}>Download Imagem Compactada</button>
-            <img src={compressedImage.src} alt="Imagem Compactada" />
-          </div>
-        )}
+  return (
+    <div className="huffman-node">
+      {char && <span className="huffman-char">'{char}'</span>}
+      <span className="huffman-frequency">{frequency}</span>
+      <div className="huffman-branches">
+        <HuffmanNode node={left} />
+        <HuffmanNode node={right} />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+const HuffmanTree = ({ tree }) => {
+  return (
+    <div className="huffman-tree">
+      <h2>Árvore de Huffman</h2>
+      <div className="huffman-root">
+        <HuffmanNode node={tree} />
+      </div>
+    </div>
+  );
+};
+
+const Huffman = () => {
+  const [input, setInput] = useState('');
+  const [tree, setTree] = useState(null);
+
+  const handleInputChange = (event) => {
+    setInput(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (input.length === 0) {
+      alert('Digite uma frase!');
+      return;
+    }
+    const frequencyMap = {};
+    for (const char of input) {
+      frequencyMap[char] = frequencyMap[char] ? frequencyMap[char] + 1 : 1;
+    }
+    const tree = buildHuffmanTree(frequencyMap);
+    setTree(tree);
+  };
+
+  const buildHuffmanTree = (frequencyMap) => {
+    const nodes = [];
+    for (const char in frequencyMap) {
+      nodes.push({ char, frequency: frequencyMap[char], left: null, right: null });
+    }
+  
+    while (nodes.length > 1) {
+      nodes.sort((a, b) => a.frequency - b.frequency);
+      const left = nodes.shift();
+      const right = nodes.shift();
+      const parent = {
+        char: '',
+        frequency: left.frequency + right.frequency,
+        left,
+        right,
+      };
+      nodes.push(parent);
+    }
+  
+    return nodes[0]; // A raiz da árvore é o último nó restante no array
+  };
+  
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Frase:
+          <input type="text" value={input} onChange={handleInputChange} />
+        </label>
+        <button type="submit">Exibir Árvore de Huffman</button>
+      </form>
+      {tree && <HuffmanTree tree={tree} />}
+    </div>
+  );
+};
 
 export default Huffman;
-
-const buildHuffmanTree = (frequencies) => {
-  const nodes = Object.entries(frequencies).map(([pixelValue, frequency]) => ({
-    pixelValue,
-    frequency,
-    left: null,
-    right: null,
-  }));
-
-  while (nodes.length > 1) {
-    nodes.sort((a, b) => a.frequency - b.frequency);
-
-    const leftChild = nodes.shift();
-    const rightChild = nodes.shift();
-    const parentNode = {
-      pixelValue: null,
-      frequency: leftChild.frequency + rightChild.frequency,
-      left: leftChild,
-      right: rightChild,
-    };
-
-    nodes.push(parentNode);
-  }
-
-  return nodes[0];
-};
-
-const encodePixel = (huffmanTree, pixelValue) => {
-  const traverseTree = (node, code) => {
-    if (!node.left && !node.right) {
-      return code;
-    }
-
-    if (code.startsWith(0)) {
-      return traverseTree(node.left, code.slice(1));
-    }
-
-    if (code.startsWith(1)) {
-      return traverseTree(node.right, code.slice(1));
-    }
-  };
-  return traverseTree(huffmanTree, pixelValue);
-};
