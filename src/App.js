@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/about-us' element={<AboutUs />} />
-        <Route path='/about-the-project' element={<AboutTheProject />} />
+        <Route path='/Greed_HuffTree-Explorer' element={<Main />} />
+        <Route path='/Greed_HuffTree-Explorer/about-us' element={<AboutUs />} />
+        <Route path='/Greed_HuffTree-Explorer/about-the-project' element={<AboutTheProject />} />
       </Routes>
     </div>
   );

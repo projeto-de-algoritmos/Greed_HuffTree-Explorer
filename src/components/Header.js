@@ -12,9 +12,9 @@ export default function Header() {
                     <img src={logo} alt="site-logo" />
                 </div>
                 <div className="nav-links">
-                    <div onClick={() => navigate('/')}>Pagina Inicial</div>
-                    <div onClick={() => navigate('/about-us')}>Sobre Nós</div>
-                    <div onClick={() => navigate('/about-the-project')}>Sobre o Projeto</div>
+                    <div onClick={() => navigate('/Greed_HuffTree-Explorer')}>Pagina Inicial</div>
+                    <div onClick={() => navigate('/Greed_HuffTree-Explorer/about-us')}>Sobre Nós</div>
+                    <div onClick={() => navigate('/Greed_HuffTree-Explorer/about-the-project')}>Sobre o Projeto</div>
                 </div>
             </nav>
         </header>
