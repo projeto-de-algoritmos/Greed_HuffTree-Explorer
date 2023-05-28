@@ -14,27 +14,34 @@
     margin-bottom: 5px;
 }
 
-.Huffman input[type="file"] {
+.huffman-input-file {
     margin-right: 10px;
     background-color: var(--color-bubblegum-pop);
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid var(--color-electric-blue);
     border-radius: 4px;
     cursor: pointer;
+}
+
+.huffman-input-file:hover {
+    transform: scale(1.025);
+    animation: shake 1s;
 }
 
 .Huffman button {
     background-color: var(--color-bubblegum-pop);
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid var(--color-electric-blue);
     border-radius: 4px;
     cursor: pointer;
+    height: 43px;
 }
 
 .Huffman button:hover {
-    background-color: var(--color-playful-peach);
+    transform: scale(1.025);
+    animation: shake 1s;
 }
 
 .Huffman h2 {

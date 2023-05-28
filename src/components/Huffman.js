@@ -81,12 +81,12 @@ class Huffman extends React.Component {
 
     return (
       <div className='Huffman'>
-        <h3>Como usar:</h3>
+        <h2>Como usar:</h2>
         <p>1. Selecione um arquivo de imagem para upload.</p>
         <p>2. Clique no botão "Compactar Imagem" para iniciar o processo de compressão.</p>
         <p>3. A imagem original e a imagem compactada serão exibidas abaixo, se o processo for concluído com sucesso.</p>
 
-        <input type="file" onChange={this.handleImageUpload} />
+        <input type="file" className="huffman-input-file" onChange={this.handleImageUpload} />
         <button onClick={this.compressImage}>Compactar Imagem</button>
 
         {originalImage && (

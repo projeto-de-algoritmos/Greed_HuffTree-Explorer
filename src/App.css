@@ -12,10 +12,53 @@
   --white: #F2F2F2;
 }
 
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  60% {
+    transform: translateX(-10px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 html,
 body,
 #root {
   height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-purple-haze) transparent;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-electric-blue) transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-purple-haze);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-electric-blue);
 }
 
 .App {
@@ -23,4 +66,14 @@ body,
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App h2 {
+  font-size: 28px;
+}
+
+.App p {
+  font-size: 22px;
 }

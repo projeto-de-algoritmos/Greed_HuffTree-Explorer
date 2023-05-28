@@ -29,17 +29,20 @@
     padding: 20px;
     color: white;
     width: 50%;
+    border-radius: 5%;
 }
 
 .intro-participants .davi h4 a,
 .intro-participants .pedro h4 a {
     color: var(--color-sunshine-yellow);
     text-decoration: none;
+    font-size: 28px;
 }
 
 .intro-participants .davi h6,
 .intro-participants .pedro h6 {
     color: var(--color-tropical-orange);
+    font-size: 16px;
 }
 
 .intro-participants .davi-photo,
@@ -49,8 +52,8 @@
 
 .intro-participants .davi-photo img,
 .intro-participants .pedro-photo img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 
