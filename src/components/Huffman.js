@@ -40,6 +40,7 @@ const HuffmanTree = ({ tree }) => {
 const Huffman = () => {
   const [input, setInput] = useState('');
   const [tree, setTree] = useState(null);
+  const [codes, setCodes] = useState(null);
 
   const handleInputChange = (event) => {
     setInput(event.target.value);
@@ -57,6 +58,8 @@ const Huffman = () => {
     }
     const tree = buildHuffmanTree(frequencyMap);
     setTree(tree);
+    const codes = buildHuffmanCodes(tree);
+    setCodes(codes);
   };
 
   const buildHuffmanTree = (frequencyMap) => {
@@ -81,6 +84,20 @@ const Huffman = () => {
     return nodes[0]; // A raiz da árvore é o último nó restante no array
   };
 
+  const buildHuffmanCodes = (tree) => {
+    const codes = {};
+    const traverse = (node, code = '') => {
+      if (node.char) {
+        codes[node.char] = code;
+      } else {
+        traverse(node.left, code + '0');
+        traverse(node.right, code + '1');
+      }
+    };
+    traverse(tree);
+    return codes;
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -91,6 +108,18 @@ const Huffman = () => {
         <button type="submit">Exibir Árvore de Huffman</button>
       </form>
       {tree && <HuffmanTree tree={tree} />}
+      {codes && (
+        <div className="huffman-codes">
+          <h2>Códigos Huffman</h2>
+          <ul>
+            {Object.keys(codes).map((char) => (
+              <li key={char}>
+                {char}: <code>{codes[char]}</code>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
