@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles/Huffman.css';
 
 const HuffmanNode = ({ node }) => {
   if (!node) {
@@ -9,9 +10,15 @@ const HuffmanNode = ({ node }) => {
 
   return (
     <div className="huffman-node">
-      {char && <span className="huffman-char">'{char}'</span>}
-      <span className="huffman-frequency">{frequency}</span>
       <div className="huffman-branches">
+        <div className="huffman-branch huffman-branch-left" />
+        <div className="huffman-branch huffman-branch-right" />
+      </div>
+      <div className="huffman-content">
+        <span className="huffman-char">{char}</span>
+        <span className="huffman-frequency">({frequency})</span>
+      </div>
+      <div className="huffman-children">
         <HuffmanNode node={left} />
         <HuffmanNode node={right} />
       </div>
@@ -57,7 +64,7 @@ const Huffman = () => {
     for (const char in frequencyMap) {
       nodes.push({ char, frequency: frequencyMap[char], left: null, right: null });
     }
-  
+
     while (nodes.length > 1) {
       nodes.sort((a, b) => a.frequency - b.frequency);
       const left = nodes.shift();
@@ -70,10 +77,9 @@ const Huffman = () => {
       };
       nodes.push(parent);
     }
-  
+
     return nodes[0]; // A raiz da árvore é o último nó restante no array
   };
-  
 
   return (
     <div>

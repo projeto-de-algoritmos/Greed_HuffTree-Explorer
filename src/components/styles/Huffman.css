@@ -1,56 +1,61 @@
-.Huffman {
-    text-align: center;
-    background-color: var(--color-playful-peach);
-    flex-grow: 1;
-}
+/* Huffman.css */
 
-.Huffman h3 {
-    color: var(--color-electric-blue);
-    margin-bottom: 10px;
-}
-
-.Huffman p {
-    color: var(--color-purple-haze);
-    margin-bottom: 5px;
-}
-
-.huffman-input-file {
-    margin-right: 10px;
-    background-color: var(--color-bubblegum-pop);
-    color: white;
-    padding: 10px 20px;
-    border: 1px solid var(--color-electric-blue);
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.huffman-input-file:hover {
-    transform: scale(1.025);
-    animation: shake 1s;
-}
-
-.Huffman button {
-    background-color: var(--color-bubblegum-pop);
-    color: white;
-    padding: 10px 20px;
-    border: 1px solid var(--color-electric-blue);
-    border-radius: 4px;
-    cursor: pointer;
-    height: 43px;
-}
-
-.Huffman button:hover {
-    transform: scale(1.025);
-    animation: shake 1s;
-}
-
-.Huffman h2 {
-    color: var(--color-electric-blue);
-    margin-bottom: 10px;
-}
-
-.Huffman img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
+.huffman-tree {
+    margin-top: 20px;
+  }
+  
+  .huffman-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .huffman-node {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .huffman-branches {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .huffman-branch {
+    width: 80px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .huffman-branch-left {
+    margin-right: 20px;
+  }
+  
+  .huffman-branch-right {
+    margin-left: 20px;
+  }
+  
+  .huffman-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .huffman-char {
+    font-weight: bold;
+  }
+  
+  .huffman-frequency {
+    margin-top: 5px;
+  }
+  
+  .huffman-children {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
