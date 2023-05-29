@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Greed_HuffTree-Explorer/static/css/main.a73818ce.css",
-    "main.js": "/Greed_HuffTree-Explorer/static/js/main.d9d4874a.js",
+    "main.css": "/Greed_HuffTree-Explorer/static/css/main.86194748.css",
+    "main.js": "/Greed_HuffTree-Explorer/static/js/main.a71c5a72.js",
     "static/js/787.dee9c94c.chunk.js": "/Greed_HuffTree-Explorer/static/js/787.dee9c94c.chunk.js",
     "static/media/logo.png": "/Greed_HuffTree-Explorer/static/media/logo.19baaffabc9a78d0d0a4.png",
     "static/media/predo.jpg": "/Greed_HuffTree-Explorer/static/media/predo.f06d1d90ca3bda418810.jpg",
     "static/media/davi.jpg": "/Greed_HuffTree-Explorer/static/media/davi.ae9703f95a8c21a4e9e0.jpg",
     "index.html": "/Greed_HuffTree-Explorer/index.html",
-    "main.a73818ce.css.map": "/Greed_HuffTree-Explorer/static/css/main.a73818ce.css.map",
-    "main.d9d4874a.js.map": "/Greed_HuffTree-Explorer/static/js/main.d9d4874a.js.map",
+    "main.86194748.css.map": "/Greed_HuffTree-Explorer/static/css/main.86194748.css.map",
+    "main.a71c5a72.js.map": "/Greed_HuffTree-Explorer/static/js/main.a71c5a72.js.map",
     "787.dee9c94c.chunk.js.map": "/Greed_HuffTree-Explorer/static/js/787.dee9c94c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a73818ce.css",
-    "static/js/main.d9d4874a.js"
+    "static/css/main.86194748.css",
+    "static/js/main.a71c5a72.js"
   ]
 }
