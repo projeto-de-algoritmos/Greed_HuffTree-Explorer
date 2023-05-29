@@ -22,8 +22,8 @@ const HuffmanTree = ({ tree }) => {
     const renderCustomNodeElement = ({ nodeDatum }) => {
         return (
             <g>
-                <circle r={10} fill="#222222" />
-                <text x={-15} y={20} fontSize={12} fill='#222222'>
+                <circle r={15} fill="#222222" />
+                <text x={-10} y={35} fontSize={12} fill='#222222'>
                     {nodeDatum.name}
                 </text>
             </g>
@@ -40,7 +40,7 @@ const HuffmanTree = ({ tree }) => {
                     translate={{ x: 0, y: 0 }}
                     separation={{ siblings: 0.5, nonSiblings: 0.5 }}
                     nodeSize={{ x: 150, y: 100 }}
-                    nodeSvgShape={{ shape: 'circle', shapeProps: { r: 10, fill: '#222222' } }}
+                    nodeSvgShape={{ shape: 'circle', shapeProps: { r: 5, fill: '#222222' } }}
                     renderCustomNodeElement={renderCustomNodeElement}
                 />
             </div>
