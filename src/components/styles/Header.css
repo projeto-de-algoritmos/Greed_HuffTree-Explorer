@@ -12,6 +12,7 @@ nav {
 
 .logo-container {
     cursor: pointer;
+    height: 100%;
 }
 
 .logo-container img {

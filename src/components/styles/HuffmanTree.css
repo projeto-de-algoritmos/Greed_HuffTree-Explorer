@@ -1,0 +1,24 @@
+:root {
+    color: var(--color-purple-haze);
+}
+
+.HuffmanTree {
+    width: 50%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-purple-haze);
+    border-radius: 10%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    left: 25%;
+}
+
+.HuffmanTree__svgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
