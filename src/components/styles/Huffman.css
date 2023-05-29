@@ -2,60 +2,59 @@
 
 .huffman-tree {
     margin-top: 20px;
-  }
-  
-  .huffman-root {
+}
+
+.huffman-root {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .huffman-node {
+}
+
+.huffman-node {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
-  }
-  
-  .huffman-branches {
+}
+
+.huffman-branches {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-  }
-  
-  .huffman-branch {
-    width: 80px;
+}
+
+.huffman-branch {
+    width: 30px;
     height: 1px;
     background-color: black;
-  }
-  
-  .huffman-branch-left {
+}
+
+.huffman-branch-left {
     margin-right: 20px;
-  }
-  
-  .huffman-branch-right {
+}
+
+.huffman-branch-right {
     margin-left: 20px;
-  }
-  
-  .huffman-content {
+}
+
+.huffman-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
-  }
-  
-  .huffman-char {
+}
+
+.huffman-char {
     font-weight: bold;
-  }
-  
-  .huffman-frequency {
+}
+
+.huffman-frequency {
     margin-top: 5px;
-  }
-  
-  .huffman-children {
+}
+
+.huffman-children {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-  }
-  
+}
