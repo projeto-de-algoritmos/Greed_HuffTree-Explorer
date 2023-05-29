@@ -2,7 +2,7 @@
   position: relative;
   text-align: center;
   width: 100%;
-  background-color: var(--color-playful-peach);
+  background-color: var(--medium-light-gray);
   display: flexbox;
   flex-grow: 1;
   padding: 0;

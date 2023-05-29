@@ -1,7 +1,7 @@
 header {
-    background-color: var(--color-pink-flamingo);
+    background-color: var(--dark-red);
     padding: 20px;
-    color: var(--white);
+    color: var(--light-gray);
 }
 
 nav {
@@ -33,21 +33,10 @@ nav {
     margin-right: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    color: var(--light-gray);
 }
 
 .nav-links div:hover {
     transform: scale(1.025);
     animation: shake 1s;
-}
-
-.nav-links div:nth-child(1) {
-    color: var(--color-sunshine-yellow);
-}
-
-.nav-links div:nth-child(2) {
-    color: var(--color-electric-blue);
-}
-
-.nav-links div:nth-child(3) {
-    color: var(--color-luscious-lime);
 }

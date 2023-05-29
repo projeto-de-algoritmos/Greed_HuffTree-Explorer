@@ -1,7 +1,7 @@
 .about-us {
-    background-color: var(--color-bubblegum-pop);
+    background-color: var(--medium-light-gray);
     padding: 20px;
-    color: white;
+    color: var(--black);
     flex-grow: 1;
     flex-basis: 0;
 }
@@ -11,11 +11,11 @@
 }
 
 .intro-text h2 {
-    color: var(--color-electric-blue);
+    color: var(--black);
 }
 
 .intro-text p {
-    color: var(--color-purple-haze);
+    color: var(--dark-gray);
 }
 
 .intro-participants {
@@ -25,23 +25,23 @@
 
 .intro-participants .davi,
 .intro-participants .pedro {
-    background-color: var(--color-playful-peach);
+    background-color: var(--light-red);
     padding: 20px;
-    color: white;
+    color: var(--medium-light-gray);
     width: 50%;
     border-radius: 5%;
 }
 
 .intro-participants .davi h4 a,
 .intro-participants .pedro h4 a {
-    color: var(--color-sunshine-yellow);
+    color: var(--medium-light-gray);
     text-decoration: none;
     font-size: 28px;
 }
 
 .intro-participants .davi h6,
 .intro-participants .pedro h6 {
-    color: var(--color-tropical-orange);
+    color: var(--dark-red);
     font-size: 16px;
 }
 

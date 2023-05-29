@@ -1,15 +1,14 @@
 :root {
-  --color-pink-flamingo: #FF66CC;
-  --color-sunshine-yellow: #FFCC00;
-  --color-electric-blue: #00CCFF;
-  --color-luscious-lime: #99FF00;
-  --color-purple-haze: #9933FF;
-  --color-candy-apple-red: #FF3333;
-  --color-tropical-orange: #FF6600;
-  --color-bubblegum-pop: #FF99CC;
-  --color-aqua-splash: #00FFFF;
-  --color-playful-peach: #FF9966;
-  --white: #F2F2F2;
+  --black: #222222;
+  --dark-gray: #333333;
+  --medium-dark-gray: #666666;
+  --medium-gray: #999999;
+  --medium-light-gray: #cccccc;
+  --light-gray: #E5E5E5;
+  --dark-red: #8B0000;
+  --red: #FF0000;
+  --light-red: #FF4D4F;
+  --intense-light-red: #FFA39E;
 }
 
 @keyframes shake {
@@ -47,18 +46,17 @@ body,
 ::-webkit-scrollbar {
   width: 8px;
   scrollbar-width: thin;
-  scrollbar-color: var(--color-purple-haze) transparent;
+  scrollbar-color: var(--red) transparent;
   scrollbar-width: thin;
-  scrollbar-color: var(--color-electric-blue) transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-purple-haze);
+  background-color: var(--light-red);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-electric-blue);
+  background-color: var(--red);
 }
 
 .App {

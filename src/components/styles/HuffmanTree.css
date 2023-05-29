@@ -1,5 +1,5 @@
 :root {
-    color: var(--color-purple-haze);
+    color: var(--medium-dark-gray);
 }
 
 .HuffmanTree {
@@ -8,17 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-purple-haze);
-    border-radius: 10%;
+    background-color: var(--light-red);
     position: relative;
+    border-radius: 10%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     left: 25%;
-}
-
-.HuffmanTree__svgContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
 }
