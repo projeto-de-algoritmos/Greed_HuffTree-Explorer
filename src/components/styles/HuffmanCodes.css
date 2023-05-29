@@ -1,0 +1,28 @@
+.HuffmanCodes {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.HuffmanCodes h2 {
+    color: var(--color-electric-blue);
+    margin-bottom: 10px;
+}
+
+.HuffmanCodes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.HuffmanCodes li {
+    margin-bottom: 10px;
+    color: var(--color-purple-haze);
+}
+
+.HuffmanCodes code {
+    background-color: var(--color-playful-peach);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
