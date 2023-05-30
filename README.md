@@ -1,10 +1,3 @@
-Temas:
- - Greed
-
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
 # HuffTree Explorer
 
 **Número da Lista**: 16<br>
@@ -26,16 +19,13 @@ Descreva os objetivos do seu projeto e como ele funciona.
 
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Node.js<br>
+**Framework**: React.js<br>
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
+1 - Clone o repositório<br>
+2 - Execute o comando "npm install"<br>
+3 - Execute o comando "npm start" para rodar o projeto<br>
 
 
 
