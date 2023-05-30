@@ -5,16 +5,16 @@ Temas:
  
  (Apague essa seção)
 
-# NomedoProjeto
+# HuffTree Explorer
 
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 16<br>
+**Conteúdo da Disciplina**: Algoritmos ambiciosos<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 19/0086131  |  Davi Ranieri Fonsêca |
+| 19/0094478 |  Pedro Henrique Nogueira Bragança |
 
 ## Sobre 
 Descreva os objetivos do seu projeto e como ele funciona. 
