@@ -10,7 +10,7 @@
 | 19/0094478 |  Pedro Henrique Nogueira Bragança |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Utilizando as frequências das palavras, constrói-se uma árvore de Huffman. O algoritmo de Huffman atribui códigos binários mais curtos para as palavras mais frequêntes e códigos mais longos para as menos frequêntes, maximizando a eficiência da codificação.
 
 ## Screenshots
 ![image](https://github.com/projeto-de-algoritmos/Greed_HuffTree-Explorer/assets/57445188/9e25e980-1de2-49ed-9b8e-275257d1c40d)
