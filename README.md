@@ -20,7 +20,10 @@ Temas:
 Descreva os objetivos do seu projeto e como ele funciona. 
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![image](https://github.com/projeto-de-algoritmos/Greed_HuffTree-Explorer/assets/57445188/9e25e980-1de2-49ed-9b8e-275257d1c40d)
+![image](https://github.com/projeto-de-algoritmos/Greed_HuffTree-Explorer/assets/57445188/828b2012-bda1-4138-ace0-a0f0725a7803)
+![image](https://github.com/projeto-de-algoritmos/Greed_HuffTree-Explorer/assets/57445188/bb4c0536-9740-4979-a0ae-7773fc10a1e3)
+
 
 ## Instalação 
 **Linguagem**: xxxxxx<br>
